@@ -1,0 +1,8 @@
+{
+  "instruments": [
+    {"symbol": "ACME", "name": "Acme Widget Works", "price": 12500000},
+    {"symbol": "BOLT", "name": "Bolt Fastener Supply", "price": 48250000},
+    {"symbol": "CRUX", "name": "Crux Cartography", "price": 3175000},
+    {"symbol": "DYNA", "name": "Dyna Turbine Group", "price": 210000000}
+  ]
+}
