@@ -1,0 +1,9 @@
+model: Trade
+table: trades
+columns:
+  - {name: id, type: int, primary: auto}
+  - {name: order_id, type: int}
+  - {name: qty, type: int}
+  - {name: price, type: int}
+  - {name: realized, type: int}
+  - {name: executed_at, type: str}

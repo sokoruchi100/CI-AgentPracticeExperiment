@@ -1,0 +1,5 @@
+model: Counter
+table: counters
+columns:
+  - {name: name, type: str, primary: true}
+  - {name: value, type: int}

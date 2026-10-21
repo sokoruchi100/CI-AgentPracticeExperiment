@@ -1,0 +1,5 @@
+model: Instrument
+table: instruments
+columns:
+  - {name: symbol, type: str, primary: true}
+  - {name: name, type: str}

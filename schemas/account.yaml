@@ -1,0 +1,5 @@
+model: Account
+table: accounts
+columns:
+  - {name: id, type: str, primary: true}
+  - {name: cash, type: int}

@@ -1,0 +1,9 @@
+model: Lot
+table: lots
+columns:
+  - {name: id, type: int, primary: auto}
+  - {name: account_id, type: str}
+  - {name: symbol, type: str}
+  - {name: qty_remaining, type: int}
+  - {name: cost_per_share, type: int}
+  - {name: opened_at, type: str}

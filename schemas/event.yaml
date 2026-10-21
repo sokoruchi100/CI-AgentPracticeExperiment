@@ -1,0 +1,7 @@
+model: Event
+table: events
+columns:
+  - {name: id, type: int, primary: auto}
+  - {name: name, type: str}
+  - {name: fields, type: str}
+  - {name: emitted_at, type: str}

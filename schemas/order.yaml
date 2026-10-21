@@ -1,0 +1,10 @@
+model: Order
+table: orders
+columns:
+  - {name: id, type: int, primary: auto}
+  - {name: account_id, type: str}
+  - {name: symbol, type: str}
+  - {name: side, type: str}
+  - {name: qty, type: int}
+  - {name: status, type: int}
+  - {name: created_at, type: str}
