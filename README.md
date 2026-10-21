@@ -1,0 +1,1 @@
+tradebook is a small Python library that simulates a paper trading account. It tracks cash, market buy and sell orders filled against a fixed local quote table, and a portfolio of positions with average cost and realized profit or loss. It is a simulation only and never connects to real markets, brokers, or money.
