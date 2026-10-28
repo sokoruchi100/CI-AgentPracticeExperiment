@@ -37,7 +37,9 @@ def test_hold_times_out_when_another_thread_holds(monkeypatch):
 
 
 def test_quote_fixture_is_integer_units():
-    assert [symbol for symbol, _ in quotes.instruments()] == ["ACME", "BOLT", "CRUX", "DYNA"]
+    symbols = [symbol for symbol, _ in quotes.instruments()]
+    assert len(symbols) == 50 and symbols == sorted(symbols)
+    assert {"ACME", "BOLT", "CRUX", "DYNA"} <= set(symbols)
     assert quotes.current("ACME").unit == 12500000
 
 
