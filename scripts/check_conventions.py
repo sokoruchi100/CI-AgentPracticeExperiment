@@ -143,10 +143,13 @@ def check_status(path, tree, assignments=True):
                     fail("status-transitions", path, node, "status assigned outside transitions.apply")
             if isinstance(node, ast.keyword) and node.arg == "status":
                 fail("status-transitions", path, node.value, "status assigned outside transitions.apply")
-            if isinstance(node, ast.Dict) and any(
-                isinstance(key, ast.Constant) and key.value == "status" for key in node.keys
+            if (
+                isinstance(node, ast.keyword)
+                and node.arg is None
+                and isinstance(node.value, ast.Dict)
+                and any(isinstance(key, ast.Constant) and key.value == "status" for key in node.value.keys)
             ):
-                fail("status-transitions", path, node, "status assigned outside transitions.apply")
+                fail("status-transitions", path, node.value, "status assigned outside transitions.apply")
             if isinstance(node, ast.Constant) and isinstance(node.value, str) and SQL_STATUS.search(node.value):
                 fail("status-transitions", path, node, "status assigned outside transitions.apply")
             if (
